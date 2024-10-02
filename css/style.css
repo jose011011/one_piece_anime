@@ -1,0 +1,155 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Importar la fuente pirata */
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+body {
+  font-family: 'Pirata One', cursive;
+  background: url('fondo-marino.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Encabezado */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 1s ease-out;
+}
+
+.logo img {
+  width: 200px;
+  height: 100px;
+}
+
+
+header h1 {
+  font-size: 2.5em;
+  color: #ffd700; /* Dorado, típico de One Piece */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffd700;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Animación para el encabezado */
+@keyframes slideDown {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+/* Sección principal */
+.caja {
+  padding: 120px 20px 40px 20px; /* Añadido padding-top para evitar que el contenido quede detrás del header */
+  max-width: 1200px;
+  margin: auto;
+}
+
+.caja article {
+  margin-bottom: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeIn 2s ease-in;
+}
+
+.caja h2 {
+  font-size: 2em;
+  color: #ffd700;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 2px 2px #000;
+}
+
+.caja p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.center {
+  display: block;
+  margin: 20px auto;
+  max-width: 800%;
+  border: 5px solid #ffd700;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+.center:hover{
+  transform: scale(1.1);
+}
+
+/* Animación de fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pie de página */
+.pie {
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 1em;
+  color: #ffd700;
+  box-shadow: 0 -2
+}
